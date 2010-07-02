@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+  <title>Netzke on Rails3 - Minimal Setup</title>
+	<%= stylesheet_link_tag "demo", "coderay" %>
+  <link rel="stylesheet/less" href="/stylesheets/works.less" type="text/css">
+  <script src="http://lesscss.googlecode.com/files/less-1.0.22.min.js"></script>
+  <%= javascript_include_tag "jquery-1.4.2.js", "jquery.rails.js" %>
+  <%= netzke_init %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="navigationWrapper">
+    <div id="navigation">
+      <ul>
+        <li class="active bigButton"><a href="#">Projects</a></li>
+      </ul>
+    </div>
+</div>
+<div id="contentWrapper">
+  <%= yield %>
+</div>
+</body>
+</html>

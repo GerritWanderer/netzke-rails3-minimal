@@ -1,0 +1,123 @@
+@import "_global2";
+
+h2#calendaryear {
+  background-color: @blueMedium;
+  .roundedTop(@blueMedium, blueMedium);
+  color: @blueDark;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+	width: 166px;
+	margin-left: 610px;	
+}
+ul#calendar {
+	.grid(40,1,1);
+  background-color: @blueMedium;
+	.roundedTop(@blueMedium, @blueMedium);
+	list-style-type: none;
+	height: 23px;
+	padding-top: 5px;
+	
+	li {
+	  float: left;
+	  margin-right: 8px;
+	  background-color: white;
+	  .roundedTop(white, white);
+	  font-size: 12px;
+	  font-weight: bold;
+	  a { color: @blueDark; }
+  } 
+  li.wday6, li.wday0 {
+	  background-color: @greyLight;
+	  .roundedTop(@greyLight, @greyLight);
+  }
+  li.selected {
+	  background-color: @orange;
+	  .roundedTop(@orange, @orange);
+	  a { color: white; }
+  }
+  
+  li.holiday {}
+  li.vacation {}
+  li.illness {}
+  
+  li#calendarweek {
+    .rounded(0px);
+    border: none;
+    background-color: @blueMedium;
+	  margin-left: 30px;
+	  padding-top: 5px;
+    span { margin: 0px 10px 0px 5px; }
+  }
+}
+div#formWrapper {
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  .grid(40,1,1);
+  background-color: @blueLight;
+  .roundedBottom(@blueLight, @blueLight);
+  border-top: 5px solid @orange;
+  
+  div#createTimeWrapper {
+    .grid(26);
+    dt.time { width: 50px; }
+    dd.time { width: 65px; }
+    dl dd.textarea textarea {
+        width: 500px;
+        height: 60px
+    }
+    textarea, dt.submit { clear: left; }
+    dl dd, dl dt.time { float: left; }
+  }
+  div#selectWrapper {
+    .grid(14);
+    dt {
+      width: 80px;
+      float: left;
+      text-align: right;
+    }
+    dd {
+      width: 200px;
+      float: left;
+      text-align: right;
+      select {
+        width: 180px;
+      }
+    }
+  }
+}
+table#workTitles, table.workDetail {
+  .rounded;
+  height: 30px;
+  td:nth-child(1) { width: 25px; }
+  td:nth-child(2) { width: 120px; padding-left: 15px; }
+  td:nth-child(3) { width: 60px; padding-left: 15px; }
+  td:nth-child(4) { width: 100px; padding-left: 15px; }
+  td:nth-child(5) { width: 120px; padding-left: 15px; }
+  td:nth-child(6) { width: 270px; padding-left: 15px; }
+  td:nth-child(7) { width: 40px; padding-left: 15px; }
+  td:nth-child(8) { width: 25px; }
+}
+table#workTitles {
+  margin-bottom: 10px;
+  background-color: @blueLight;
+  td { font-weight: bold; font-size: 11px; }
+}
+table.workDetail {
+  td:nth-child(odd) { background-color: @blueTableOdd; }
+  td:last-child, td:first-child, td:nth-child(7) { background-color: transparent; }
+  min-height: 60px;
+  margin-bottom: 2px;
+  background-color: @blueTable;
+}
+table#statistic {
+  background-color: @blueLight;
+  .rounded;
+  height: 30px;
+  margin-top: 8px;
+  td:nth-child(1) { width: 25px; }
+  td:nth-child(2) { width: 120px; padding-left: 15px; }
+  td:nth-child(3) { width: 60px; padding-left: 15px; }
+  td:nth-child(4) { width: 575px; padding-left: 15px; }
+  td:nth-child(5) { width: 25px; }
+}

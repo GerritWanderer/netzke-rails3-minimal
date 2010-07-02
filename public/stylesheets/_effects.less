@@ -1,0 +1,57 @@
+.rounded (@radius: 10px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+.roundedTop (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-topleft: @radius;
+  -moz-border-radius-topright: @radius;
+  -webkit-border-top-left-radius: @radius;
+  -webkit-border-top-right-radius: @radius;
+  border-top-left-radius: @radius;
+  border-top-right-radius: @radius;
+  border: @weight solid @background;
+  -moz-border-top-colors: @color;
+}
+.roundedRight (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-topright: @radius;
+  -moz-border-radius-bottomright: @radius;
+  -webkit-border-top-right-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  border-top-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+.roundedTopLeft (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-topleft: @radius;
+  -webkit-border-top-left-radius: @radius;
+  border-top-left-radius: @radius;
+}
+.roundedTopRight (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-topright: @radius;
+  -webkit-border-top-right-radius: @radius;
+  border-top-right-radius: @radius;
+}
+.roundedBottomLeft (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-bottomleft: @radius;
+  -webkit-border-bottom-left-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+.roundedBottomRight (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-bottomright: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+.roundedBottom (@background: #ffffff, @color: #ffffff, @weight: 5px, @radius: 10px) {
+  -moz-border-radius-bottomleft: @radius;
+  -moz-border-radius-bottomright: @radius;
+  -webkit-border-bottom-left-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  border-top-left-radius: @radius;
+  border-top-right-radius: @radius;
+  border: @weight solid @background;
+  -moz-border-bottom-colors: @color;
+}
+.gradient (@from: #ffffff, @to: #ffffff) {
+    background: -moz-linear-gradient(top, @from, @to);
+    background: -webkit-gradient(linear, top, bottom, from(@from), to(@to));
+}

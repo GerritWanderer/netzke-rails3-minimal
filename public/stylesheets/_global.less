@@ -1,0 +1,99 @@
+@bodyBackgroundColor: #4c6b82;
+
+@blueLight: #E5EEFA;
+@blueMedium: #96B5E4;
+@blueDark: #112363;
+@blueNavigation: #0361AA;
+@blueTable: #D4E1F5;
+@blueTableOdd: #C9DAF3;
+@orange: #FC6700;
+@greyLight: #d2d2d2;
+@greyDark: #6F6F6F;
+
+@import "_reset-min";
+@import "_grid";
+@import "_effects";
+
+body {
+	background: url(/images/background.gif) left 44px repeat-x @bodyBackgroundColor;
+}
+div#navigationWrapper {
+  background-color: @blueDark;
+}
+div#navigation {
+	.container;
+	height: 45px;
+	ul {
+    margin-top: 8px;
+    list-style-type: none;
+    float: left;
+    li.bigButton {
+      .roundedTop(@blueNavigation, @blueNavigation);
+      background-color: @blueNavigation;
+      width: 140px;
+      height: 25px;
+      margin-right: 8px;
+      float: left;
+      a {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        padding-top: 5px;
+    	}
+    }
+    li.active {
+      .roundedTop(@blueLight, @blueLight);
+      background-color: @blueLight;
+      height: 27px;
+      a {
+        color: @orange;
+        font-weight: bold;
+      }
+    }
+    li.logout {
+      color: white;
+      font-size: 11px;
+      padding-top: 0px;
+      text-align: center;
+      float: left;
+      margin-left: 380px;
+    }
+	}
+}
+div#contentWrapper {
+  background-color: white;
+	width: 850px;
+	padding: 40px 55px 40px 55px;
+  margin: 40px auto;
+	min-height: 400px;
+	.rounded;
+}
+div#content {
+	background-color: @blueLight;
+	padding: 40px 0px 40px 0px;
+	.grid(18,1,1,14,14);
+	.rounded;
+}
+
+
+div#content form dl {
+  dt {
+    width: 150px;
+    float: left;
+    clear: both;
+  } dd {
+    margin-left: 170px;
+    width: 190px;
+    clear: right;
+  }
+  input {
+    width: 190px;
+  }
+}
+div#content ul.links_shared {
+  li {
+    display: inline;
+    padding: 0px 5px 0px 5px;
+  }
+}
